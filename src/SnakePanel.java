@@ -14,7 +14,7 @@ public class SnakePanel extends JPanel {
 
 	Snake s = new Snake();
 	
-	Timer timer = new Timer(500,null);
+	Timer timer = new Timer(200,null);
 	public static void main(String[] args) {
 		try {
 			// Set System L&F
@@ -36,42 +36,16 @@ public class SnakePanel extends JPanel {
 		sp.startGame();
 	}
 	private void setUpKeyMappings() {
-		this.getInputMap().put(KeyStroke.getKeyStroke("UP"),"left");
-		this.getActionMap().put("left",new AbstractAction(){
 
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				
-				System.out.println("Hit left arrow!!");
-			}
-		});
-		this.getInputMap().put(KeyStroke.getKeyStroke("DOWN"),"left");
-		this.getActionMap().put("left",new AbstractAction(){
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-
-				System.out.println("Hit left arrow!!");
-			}
-		});
 		this.getInputMap().put(KeyStroke.getKeyStroke("LEFT"),"left");
 		this.getActionMap().put("left",new AbstractAction(){
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-
+				// what do you want to do when the left arrow is pressed?
 				System.out.println("Hit left arrow!!");
 			}
 		});
-        this.getInputMap().put(KeyStroke.getKeyStroke("RIGHT"),"left");
-        this.getActionMap().put("left",new AbstractAction(){
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                System.out.println("Hit left arrow!!");
-            }
-        });
 		this.requestFocusInWindow();
 		
 	}
